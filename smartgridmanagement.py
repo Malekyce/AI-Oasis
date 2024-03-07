@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-# Load historical energy demand data
+# Load historical energy demand data (replace with actual data)
 def load_energy_data():
     # Load data from database
+    # Preprocess data (e.g., handle missing values, normalize)
+    pass  # Placeholder for actual implementation
 
 def main():
     st.set_page_config(page_title="Smart Grid Management", page_icon="⚡️")
@@ -18,17 +20,17 @@ def main():
     # User input for energy demand adjustment
     user_input = st.slider("Adjust Demand (MW)", min_value=0, max_value=1000, value=500)
 
-    # Predicted demand
+    # Predicted demand (placeholder)
     predicted_demand = user_input * 0.9
 
     st.subheader("Real-Time Energy Distribution")
     st.markdown(f"Predicted Demand: **{predicted_demand:.2f} MW**")
 
-    # Display energy demand chart
+    # Display energy demand chart (use actual data)
     st.subheader("Hourly Energy Demand")
     st.line_chart(energy_data.set_index("Hour"))
 
-    # Navigation to details page
+    # Add navigation to details page
     if st.button("View Details"):
         st.experimental_rerun()
 
